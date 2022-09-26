@@ -17,7 +17,7 @@ pip install -r requirements.txt
 ## Uitvoeren van de Flask webapplicatie:
 
 ```
-python webapp.python
+python webapp.py
 ```
 
 De Flask webserver wordt opgestart op http://localhost:8080
