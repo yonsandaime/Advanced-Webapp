@@ -1,8 +1,9 @@
 # Voorbeeld Flask gebaseerde webapplicatie
 
 ## Downloaden / Updaten van dit project:
+Git project eerste keer downloaden (via een terminal): 
 ```
-https://gitlab.com/steffen.thielemans/flask-webapp-example.git
+git clone https://gitlab.com/steffen.thielemans/flask-webapp-example.git
 ```
 
 Nadien updaten via ```git pull``` binnen dit git project (=deze map)
