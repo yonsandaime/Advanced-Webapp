@@ -10,15 +10,10 @@
         $(".mijnsliders").val(20);  //Initialiseer alle mijnsliders op 20
         $(".mijnwaardes").text(20); //Initialiseer alle mijnwaardes op 20
 
-        $("#mijn1eslider").change(function() {
-          console.log("slider 1 aangepast naar " + $("#mijn1eslider").val());
-          $("#mijn1ewaarde").text($("#mijn1eslider").val());
-        });  
-        
-        $("#mijn2eslider").change(function() {
-          console.log("slider 2 aangepast naar " + $("#mijn2eslider").val());
-          $("#mijn2ewaarde").text($("#mijn2eslider").val());
-        });        
+        $(".mijnsliders").change(function() {
+          console.log("Slider " + this.id + " aangepast naar " + $(this).val());
+          $("#" + this.id + "waarde").text($(this).val());
+        });       
         
       });
     </script>    
@@ -26,9 +21,9 @@
   </head>
   <body>
     <h1>jQuery voorbeeld</h1>
-    <input type="range" min="0" max="100" class="mijnsliders" id="mijn1eslider"> waarde <span class="mijnwaardes" id="mijn1ewaarde">0</span>
+    <input type="range" min="0" max="100" class="mijnsliders" id="mijn1eslider"> waarde <span class="mijnwaardes" id="mijn1esliderwaarde">0</span>
     <br>
-    <input type="range" min="0" max="100" class="mijnsliders" id="mijn2eslider"> waarde <span class="mijnwaardes" id="mijn2ewaarde">0</span>
+    <input type="range" min="0" max="100" class="mijnsliders" id="mijn2eslider"> waarde <span class="mijnwaardes" id="mijn2esliderwaarde">0</span>
 
     <p>jQuery wordt extern inladen via een CDN.</p>
     <p>jQuery element selectors via $(".mijnclass") of via $("#mijnID").</p>
