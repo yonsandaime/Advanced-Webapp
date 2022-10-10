@@ -1,0 +1,8 @@
+<html>
+<p>Index pagina hier...</p>
+{% if current_user.is_authenticated %}
+<p><a href="{{url_for('home')}}">home</a> <a href="{{url_for('logout')}}">logout</a>.</p>
+{% else %}
+<p><a href="{{url_for('login')}}">login</a> <a href="{{url_for('register')}}">register</a>.</p>
+{% endif %}
+</html>
