@@ -27,11 +27,17 @@ async def coapsetlampstatus(url, value):
         print('Result: %s'%(response.code))
         
 async def main():
-   await coapsetlampstatus('coap://lamp1c.irst.be/lamp/dimming', b'10')
+   await coapsetlampstatus('coap://lamp1c.irst.be/lamp/dimming', b'0')
    
    val = await coapgetlampstatus('coap://lamp1c.irst.be/lamp/dimming')
    print("retrieved lamp value:", val)
 
+async def getlampstatus(lamp):
+    val = await coapgetlampstatus(lamp)
+    return val
+
+async def setlampstatus(lamp,value):
+    val = await coapsetlampstatus(lamp,str.encode(str(value)))
 
 if __name__ == "__main__":
    asyncio.run(main())

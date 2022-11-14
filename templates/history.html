@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="../static/css/historystyle.css">
+
+  </head>
+  <body>
+    <p id = "home_logout"> <a href="{{ url_for('home') }}">HOME </a><a id = "logout" href="{{ url_for('logout') }}">LOGOUT</a></p>
+    <table>
+      <caption>Lamp change history</caption>
+      <thead>
+    <tr> 
+      <th scope="col">Date</th>
+      <th scope="col">Username</th>
+      <th scope="col">Lamp</th>
+      <th scope="col">Value</th>
+  </tr>
+</thead>
+<tbody>
+    {% for item in data %}
+    <tr>
+        <td scope="row" data-label="Date">{{item[4]}}</td>
+        <td data-label="Username">{{item[1]}}</td>
+        <td data-label="Lamp">{{item[2]}}</td>
+        <td data-label="Value">{{item[3]}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  </table>
+  </body>
+</html>
+

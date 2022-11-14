@@ -4,8 +4,8 @@
 def init_db():
 	"""Initialize database(s)."""
 	from app import create_app,db
-	from models import User
-
+	from models import User,Entries
+	
 	app = create_app()
 	app.app_context().push()
 	db.create_all()

@@ -1,0 +1,33 @@
+body {
+  background-image: url("VUB8.jpeg");
+  background-color: #cccccc;
+  background-size: 1500px;
+ }
+
+h3 {
+  color: green;
+  margin-left: 20px;
+}
+
+.mijnwaardes {
+  margin-left: 20px;
+}
+
+#history_logout {
+  margin-left: 85%;
+  margin-top: 15px;
+}
+
+a {
+  color: black;
+  font-size: 16px;
+}
+
+#logout {
+  margin-left: 30px;
+}
+
+#hello_user {
+  margin-left: 50px;
+}
+

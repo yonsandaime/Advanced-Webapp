@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="../static/css/loginstyle.css">
+    <script>
+
+    </script>
+  </head>
+  <body>
+    {% if current_user.is_authenticated %}
+      <meta http-equiv="Refresh" content="0; url='http://localhost:8081/home'" />
+    {% endif %}
+    <div class="login-box">
+      <h2>Sign in</h2>
+      <form action='login' method='POST'>
+        <div class="user-box">
+          <input type='text' name='username' id='username' placeholder='username'/>
+          <label>Username</label>
+        </div>
+        <div class="user-box">
+          <input type='password' name='password' id='password' placeholder='password'/>
+          <label>Password</label>
+        </div>
+        <h3> {{msg}}</h3>
+        <input id = "submit" type='submit' name='submit' value = "Sign in"/>
+        <p>No account yet? Please <a href="{{ url_for('register') }}">Register</a></p>
+        
+      </form>
+      
+    </div>
+    
+  </body>
+</html>

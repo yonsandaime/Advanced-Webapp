@@ -1,33 +1,8 @@
-<!doctype html>
 <html>
-  <head>
-    <title>Gevorderde webapplicaties - Les 1 - jQuery</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>    
-    <script>
-      $(document).ready(function(){
-
-
-        $(".mijnsliders").val(20);  //Initialiseer alle mijnsliders op 20
-        $(".mijnwaardes").text(20); //Initialiseer alle mijnwaardes op 20
-
-        $(".mijnsliders").change(function() {
-          console.log("Slider " + this.id + " aangepast naar " + $(this).val());
-          $("#" + this.id + "waarde").text($(this).val());
-        });       
-        
-      });
-    </script>    
-
-  </head>
-  <body>
-    <h1>jQuery voorbeeld</h1>
-    <input type="range" min="0" max="100" class="mijnsliders" id="mijn1eslider"> waarde <span class="mijnwaardes" id="mijn1esliderwaarde">0</span>
-    <br>
-    <input type="range" min="0" max="100" class="mijnsliders" id="mijn2eslider"> waarde <span class="mijnwaardes" id="mijn2esliderwaarde">0</span>
-
-    <p>jQuery wordt extern inladen via een CDN.</p>
-    <p>jQuery element selectors via $(".mijnclass") of via $("#mijnID").</p>
-    <p>Gebruik de jQuery <a href="https://api.jquery.com/change">change()</a> eventhandler en <a href="https://api.jquery.com/val">val()</a> functie.</p>
-    <p>De tekst/html waardes kunnen aangepast worden met <a href="https://api.jquery.com/text">text()</a> en/of <a href="https://api.jquery.com/html">html()</a></p>
-  </body>
+<p>Index pagina hier...</p>
+{% if current_user.is_authenticated %}
+<meta http-equiv="Refresh" content="0; url='http://localhost:8081/home'" />
+{% else %}
+<meta http-equiv="Refresh" content="0; url='http://localhost:8081/login'" />
+{% endif %}
 </html>

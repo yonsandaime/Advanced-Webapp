@@ -16,6 +16,6 @@ def create_app():
     
     login_manager.init_app(app)
     db.init_app(app)
-    bcrypt.init_app(app)    
-
+    bcrypt.init_app(app) 
+    
     return app

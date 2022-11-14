@@ -12,3 +12,12 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(120), unique=True, nullable=False)
     pwd = db.Column(db.String(300), nullable=False)
+
+class Entries(UserMixin,db.Model):
+    __tablename__ = "entries"
+    
+    entryid = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(120), nullable=False)
+    entrylamp = db.Column(db.String(120), nullable=False)
+    entryvalue = db.Column(db.Integer, nullable=False)
+    time = db.Column(db.String(120), nullable=False)

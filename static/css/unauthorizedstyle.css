@@ -1,0 +1,16 @@
+body {
+  background-image: url("VUB8.jpeg");
+  background-color: #cccccc;
+  background-size: 1500px;
+ }
+
+ a {
+  font-size: 25px;
+  
+}
+
+p {
+  text-align: center;
+  margin-top: 25%;
+  font-size: 25px;
+}
